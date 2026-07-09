@@ -1,6 +1,6 @@
 # WallpaperRotator
 
-A macOS Automator app that fetches a random wallpaper from [jalexsan/wallpapers](https://github.com/jalexsan/wallpapers) and sets it as your desktop background. Can be scheduled to rotate automatically every hour.
+A macOS Automator app that fetches a random wallpaper and sets it as your desktop background. Pulls from [jalexsan/wallpapers](https://github.com/jalexsan/wallpapers) via GitHub, with automatic fallback to [Peapix](https://peapix.com) Spotlight if GitHub's CDN blocks the download. Can be scheduled to rotate automatically every hour.
 
 ## How it works
 
@@ -9,8 +9,9 @@ The Automator app runs an AppleScript that:
 1. Queries the [GitHub API](https://docs.github.com/en/rest/git/trees) to list all files in the `jalexsan/wallpapers` repo
 2. Picks a random image (PNG/JPG/JPEG)
 3. Downloads it from `raw.githubusercontent.com` to `~/Pictures/GitHubWallpapers/`
-4. Sets it as the desktop wallpaper via `System Events`
-5. Deletes any previous wallpapers from the cache folder
+4. If GitHub's CDN blocks the download, falls back to [Peapix Spotlight](https://peapix.com/spotlight) API (no API key required)
+5. Sets it as the desktop wallpaper via `System Events`
+6. Deletes any previous wallpapers from the cache folder
 
 ## Installation
 
