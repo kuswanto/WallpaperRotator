@@ -16,7 +16,9 @@ The Automator app runs an AppleScript that:
 
 ### App only (manual run)
 
-Copy `WallpaperRotator.app` to `/Applications`. Double-click to run — it'll prompt for any needed permissions.
+1. Download `WallpaperRotator.zip` from the repo
+2. Unzip and drag `WallpaperRotator.app` to `/Applications`
+3. Double-click to run — it'll prompt for any needed permissions
 
 ### Scheduled rotation (every hour)
 
@@ -42,7 +44,7 @@ Removes the LaunchAgent, the app, and the wallpaper cache.
 
 | File | Purpose |
 |------|---------|
-| `WallpaperRotator.app/` | Automator application bundle containing the AppleScript workflow |
+| `WallpaperRotator.zip` | Zipped Automator application bundle containing the AppleScript workflow |
 | `com.user.wallpaperrotator.plist` | LaunchAgent property list for hourly scheduling |
 | `install_wallpaper_schedule.sh` | Installs and loads the LaunchAgent |
 | `uninstall_wallpaper_schedule.sh` | Unloads and removes the LaunchAgent, app, and cache |
