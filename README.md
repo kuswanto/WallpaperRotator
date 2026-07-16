@@ -58,3 +58,5 @@ On first run, macOS may ask for:
 - **Files & Folders** — access to `~/Pictures` (for downloading wallpapers)
 
 Grant these in **System Settings > Privacy & Security > Automation** if they don't prompt automatically.
+
+![System Settings > Privacy & Security > Automation](system-settings-privacy.png)
